@@ -1,0 +1,191 @@
+body{
+    background: url('./images/iNmouRApXYM.jpg') repeat;
+}
+#head{
+    display: flex;
+    justify-content: center;
+}
+.book-val{
+    /* margin-left: -150px; */
+    transition: 200ms ease-in-out;
+}
+.header{
+    /* margin-top: -20px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: solid black;
+    height: 200px;
+    background: url('./images/books-library-banner.jpg') center no-repeat;
+    background-size: cover;
+}
+.main-add{
+    /* margin-top: 5%; */
+    
+    width: 91%;
+    display: flex;
+    justify-content: flex-end;
+}
+#main-add{
+    color: rgb(71, 163, 106);
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 10%; 
+    margin-bottom: 10%;
+    border-radius: 5px;
+    border:solid 3px rgb(77, 46, 82);
+    font-size: 3vh;
+    background: transparent;
+    transition: 500ms ease-in-out;
+    overflow: hidden;
+}
+#add-text{
+    text-shadow: -1px -1px 0 #000, 2px -1px 0 #000, -1px 2px 0 #000, 2px 2px 0 #000;
+}
+#main-add:hover{
+    color: rgb(70, 211, 216);
+    border: solid 3px yellow;
+    transition: 500ms ease-in-out;
+    
+}
+.stats{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 400px;
+    /* margin-top: -15px; */
+    margin-left: 5px;
+}
+.grid-container
+{
+
+    padding: 10px;
+    transition: 150ms ease-out;
+    /* border:solid 1px black; */
+}
+.grid-container.active{
+  /* display: grid;
+  grid-template-columns: 4fr 5fr; */
+  background: none;
+  background-color: #c00c9342;
+  padding: 10px;
+  transition: 200ms ease-in-out;
+}
+
+.add-book {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 30px;
+    text-align: center;
+}
+.modal {
+    background: url('./images/832992.jpg') center;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 5px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width:500px;
+    max-width: 80%;
+    
+}
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;    
+}
+.modal-header .title{
+    font-size: 2rem;
+    font-weight: bold;
+    color:rgb(252, 10, 151);
+    text-shadow: -1px -1px 0 #000, 2px -1px 0 #000, -1px 2px 0 #000, 2px 2px 0 #000;
+}
+.modal-header .close-button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.modal-body{
+    padding: 10px 15px;
+}
+#add-book{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: solid 3px black;
+    background: transparent;
+}
+#add-book:hover{
+    background: tomato;
+    box-shadow: 3px 5px teal;
+}
+.book-details {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+#overlay{
+    position:fixed;
+    opacity:0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+#overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
+.display-book {
+    
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-gap: 10px ; 
+  background-color: rgba(255, 255, 255, 0.8);
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  transition: 200ms ease-in-out;
+}
+.tog-but.active{
+    background-color: green;
+    border: 1px solid black;
+    transition: 700ms ease-in-out;
+}
+.tog-but{
+    border: 1px solid black;
+    transition: 700ms ease-in-out;
+}
+.read-pages
+{
+    transform: scale(0);
+}
+
+.read-pages.active
+{
+    transform: scale(1);
+}
+.grid-image{
+    margin-top: -60px;
+    height: 400px;
+    transform: scale(1);
+    transition: 200ms ease-in-out;
+    
+}
+.grid-image.active{
+    width: 0;
+    height:0;
+    transform: scale(0);
+    transition: 200ms ease-in-out;
+}
